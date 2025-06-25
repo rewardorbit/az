@@ -1,0 +1,1086 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activating Your Reward</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        :root {
+            --primary-color: #ff7b7b;
+            --secondary-color: #ff5984;
+            --bg-gradient-start: #fff9f9;
+            --bg-gradient-end: #fff0f0;
+            --headline-gradient-start: #ff7b7b;
+            --headline-gradient-end: #ff5984;
+            --button-gradient-start: #ff7b7b;
+            --button-gradient-end: #ff5984;
+            --progress-gradient-start: var(--primary-color);
+            --progress-gradient-end: var(--secondary-color);
+        }
+
+        body.theme-bloxfruits {
+            --primary-color: #41b883;
+            --secondary-color: #35495e;
+            --bg-gradient-start: #f2f9f5;
+            --bg-gradient-end: #e8f5ee;
+            --headline-gradient-start: #41b883;
+            --headline-gradient-end: #35495e;
+            --button-gradient-start: #41b883;
+            --button-gradient-end: #35495e;
+        }
+
+        body.theme-fortnite {
+            --primary-color: #9d4dbb;
+            --secondary-color: #5d3b87;
+            --bg-gradient-start: #f8f6fb;
+            --bg-gradient-end: #f0eaf8;
+            --headline-gradient-start: #9d4dbb;
+            --headline-gradient-end: #5d3b87;
+            --button-gradient-start: #9d4dbb;
+            --button-gradient-end: #5d3b87;
+        }
+
+        body.theme-victoria {
+            --primary-color: #ff85b1;
+            --secondary-color: #e53a82;
+            --bg-gradient-start: #fff5fa;
+            --bg-gradient-end: #ffedf6;
+            --headline-gradient-start: #ff85b1;
+            --headline-gradient-end: #e53a82;
+            --button-gradient-start: #ff85b1;
+            --button-gradient-end: #e53a82;
+        }
+
+        body.theme-zelle {
+            --primary-color: #6e2ff5;
+            --secondary-color: #5319db;
+            --bg-gradient-start: #f5f0ff;
+            --bg-gradient-end: #efe5ff;
+            --headline-gradient-start: #6e2ff5;
+            --headline-gradient-end: #5319db;
+            --button-gradient-start: #6e2ff5;
+            --button-gradient-end: #5319db;
+        }
+
+        body.theme-brandy {
+            --primary-color: #c49a6c;
+            --secondary-color: #a67c4e;
+            --bg-gradient-start: #faf6f0;
+            --bg-gradient-end: #f5ede4;
+            --headline-gradient-start: #c49a6c;
+            --headline-gradient-end: #a67c4e;
+            --button-gradient-start: #c49a6c;
+            --button-gradient-end: #a67c4e;
+        }
+
+        body.theme-steam {
+            --primary-color: #1b2838;
+            --secondary-color: #2a475e;
+            --bg-gradient-start: #f0f3f6;
+            --bg-gradient-end: #e5eaef;
+            --headline-gradient-start: #1b2838;
+            --headline-gradient-end: #2a475e;
+            --button-gradient-start: #1b2838;
+            --button-gradient-end: #2a475e;
+        }
+
+        body.theme-apple {
+            --primary-color: #000000;
+            --secondary-color: #333333;
+            --bg-gradient-start: #f5f5f7;
+            --bg-gradient-end: #e5e5e7;
+            --headline-gradient-start: #000000;
+            --headline-gradient-end: #333333;
+            --button-gradient-start: #000000;
+            --button-gradient-end: #333333;
+        }
+
+        body.theme-ps5 {
+            --primary-color: #0070cc;
+            --secondary-color: #005bb3;
+            --bg-gradient-start: #f0f8ff;
+            --bg-gradient-end: #e5f2ff;
+            --headline-gradient-start: #0070cc;
+            --headline-gradient-end: #005bb3;
+            --button-gradient-start: #0070cc;
+            --button-gradient-end: #005bb3;
+        }
+
+        body.theme-xbox {
+            --primary-color: #107c10;
+            --secondary-color: #0e6b0e;
+            --bg-gradient-start: #f0f9f0;
+            --bg-gradient-end: #e5f5e5;
+            --headline-gradient-start: #107c10;
+            --headline-gradient-end: #0e6b0e;
+            --button-gradient-start: #107c10;
+            --button-gradient-end: #0e6b0e;
+        }
+
+        body.theme-venmo {
+            --primary-color: #3d95ce;
+            --secondary-color: #2d80b8;
+            --bg-gradient-start: #f0f8fc;
+            --bg-gradient-end: #e5f1f9;
+            --headline-gradient-start: #3d95ce;
+            --headline-gradient-end: #2d80b8;
+            --button-gradient-start: #3d95ce;
+            --button-gradient-end: #2d80b8;
+        }
+
+        body.theme-minecoins {
+            --primary-color: #4a9e45;
+            --secondary-color: #3b8435;
+            --bg-gradient-start: #f2f9f2;
+            --bg-gradient-end: #e8f5e8;
+            --headline-gradient-start: #4a9e45;
+            --headline-gradient-end: #3b8435;
+            --button-gradient-start: #4a9e45;
+            --button-gradient-end: #3b8435;
+        }
+
+        body.theme-doordash {
+            --primary-color: #ff3008;
+            --secondary-color: #e02500;
+            --bg-gradient-start: #fff5f0;
+            --bg-gradient-end: #ffebe5;
+            --headline-gradient-start: #ff3008;
+            --headline-gradient-end: #e02500;
+            --button-gradient-start: #ff3008;
+            --button-gradient-end: #e02500;
+        }
+
+        body.theme-netflix {
+            --primary-color: #e50914;
+            --secondary-color: #b81d24;
+            --bg-gradient-start: #fff0f1;
+            --bg-gradient-end: #ffe5e6;
+            --headline-gradient-start: #e50914;
+            --headline-gradient-end: #b81d24;
+            --button-gradient-start: #e50914;
+            --button-gradient-end: #b81d24;
+        }
+
+        body.theme-aldi {
+            --primary-color: #00558d;
+            --secondary-color: #d41f37;
+            --bg-gradient-start: #f0f6fb;
+            --bg-gradient-end: #e5eef7;
+            --headline-gradient-start: #00558d;
+            --headline-gradient-end: #004579;
+            --button-gradient-start: #00558d;
+            --button-gradient-end: #004579;
+        }
+
+        body.theme-marshalls {
+            --primary-color: #e60013;
+            --secondary-color: #c4000f;
+            --bg-gradient-start: #fff0f1;
+            --bg-gradient-end: #ffe5e6;
+            --headline-gradient-start: #e60013;
+            --headline-gradient-end: #c4000f;
+            --button-gradient-start: #e60013;
+            --button-gradient-end: #c4000f;
+        }
+
+        body.theme-crumbl {
+            --primary-color: #f5a8bb;
+            --secondary-color: #f18da5;
+            --bg-gradient-start: #fef5f7;
+            --bg-gradient-end: #fcebef;
+            --headline-gradient-start: #f5a8bb;
+            --headline-gradient-end: #f18da5;
+            --button-gradient-start: #f5a8bb;
+            --button-gradient-end: #f18da5;
+        }
+
+        /* PayPal theme */
+
+        body.theme-paypal {
+            --primary-color: #0070ba;
+            --secondary-color: #003087;
+            --bg-gradient-start: #f5f9ff;
+            --bg-gradient-end: #edf6ff;
+            --headline-gradient-start: #0070ba;
+            --headline-gradient-end: #003087;
+            --button-gradient-start: #0070ba;
+            --button-gradient-end: #003087;
+        }
+
+        /* TikTok theme */
+
+        body.theme-tiktok {
+            --primary-color: #fe2c55;
+            --secondary-color: #25f4ee;
+            --bg-gradient-start: #f8f8f8;
+            --bg-gradient-end: #f0f0f0;
+            --headline-gradient-start: #fe2c55;
+            --headline-gradient-end: #25f4ee;
+            --button-gradient-start: #fe2c55;
+            --button-gradient-end: #25f4ee;
+        }
+
+        /* Amazon theme */
+
+        body.theme-amazon {
+            --primary-color: #ff9900;
+            --secondary-color: #146eb4;
+            --bg-gradient-start: #fffaf4;
+            --bg-gradient-end: #fff8e8;
+            --headline-gradient-start: #ff9900;
+            --headline-gradient-end: #ff7c00;
+            --progress-gradient-start: #ff9900;
+            --progress-gradient-end: #ff7c00;
+        }
+
+        /* Walmart theme */
+
+        body.theme-walmart {
+            --primary-color: #0071ce;
+            --secondary-color: #ffc220;
+            --bg-gradient-start: #f0f7ff;
+            --bg-gradient-end: #e8f3ff;
+            --headline-gradient-start: #0071ce;
+            --headline-gradient-end: #005cb8;
+            --progress-gradient-start: #0071ce;
+            --progress-gradient-end: #005cb8;
+        }
+
+        /* Target theme */
+
+        body.theme-target {
+            --primary-color: #cc0000;
+            --secondary-color: #fc9090;
+            --bg-gradient-start: #fff5f5;
+            --bg-gradient-end: #ffecec;
+            --headline-gradient-start: #cc0000;
+            --headline-gradient-end: #b00000;
+            --progress-gradient-start: #cc0000;
+            --progress-gradient-end: #b00000;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+        }
+
+        .headline {
+            background: linear-gradient(90deg, var(--headline-gradient-start), var(--headline-gradient-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .card {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 20px;
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--progress-gradient-start), var(--progress-gradient-end));
+            border-radius: 10px;
+            transition: width 1.5s ease;
+        }
+
+        /* Animation for gift card */
+
+        .gift-card-animation {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        .gift-card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 140px;
+            height: 90px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            z-index: 10;
+            transition: all 0.5s ease;
+        }
+
+        .gift-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 5px;
+        }
+
+        .particle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            opacity: 0;
+            animation: fadeInOut 2s ease-in-out infinite;
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+        }
+
+        .ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .ring-1 {
+            width: 160px;
+            height: 160px;
+            border-color: var(--primary-color);
+            animation: pulse 2s ease-out infinite;
+        }
+
+        .ring-2 {
+            width: 180px;
+            height: 180px;
+            border-color: var(--secondary-color);
+            animation: pulse 2s ease-out 0.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: translate(-50%, -50%) scale(0.5);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        .activation-check {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+            opacity: 0;
+            z-index: 20;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .light-beam {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 70%);
+            opacity: 0;
+            z-index: 5;
+        }
+    </style>
+    <script src="/translation.js"></script>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <!-- Top Banner -->
+    <div class="bg-gradient-to-r from-pink-400 to-pink-500 py-3 text-white text-center font-medium" id="top-banner">
+        Summer Special: $<span id="banner-value">1000</span> Towards <span id="banner-type">SHEIN</span>!
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-grow flex items-center justify-center p-4 py-10">
+        <div class="container mx-auto max-w-2xl">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden card p-8">
+                <div class="text-center mb-8">
+                    <h1 class="headline text-3xl md:text-4xl font-bold mb-2">Activating Your Reward</h1>
+                    <p class="text-gray-600 text-lg" id="status-text">Please wait while we verify your information...</p>
+                </div>
+
+                <!-- New gift card animation -->
+                <div class="gift-card-animation mb-10">
+                    <!-- Animated rings -->
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+
+                    <!-- Light beam effect -->
+                    <div class="light-beam" id="light-beam"></div>
+
+                    <!-- Gift card in center -->
+                    <div class="gift-card" id="gift-card">
+                        <img id="brandLogo" src="" alt="Gift Card">
+                    </div>
+
+                    <!-- Particles around the gift card -->
+                    <div id="particles-container"></div>
+
+                    <!-- Checkmark that appears at the end -->
+                    <div class="activation-check" id="activation-check">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+
+                <!-- Progress steps -->
+                <div class="space-y-6 max-w-md mx-auto mb-8">
+                    <div class="flex items-center" id="step1">
+                        <div class="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center mr-3 text-pink-600" id="step1-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-center mb-1">
+                                <div class="font-medium">Email Verification</div>
+                                <div class="text-green-500 text-sm font-medium">Complete</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill-1" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center" id="step2">
+                        <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center mr-3 text-gray-400" id="step2-icon">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-center mb-1">
+                                <div class="font-medium">Generating Gift Card</div>
+                                <div class="text-blue-500 text-sm font-medium" id="step2-status">Processing...</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill-2" style="width: 0;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center" id="step3">
+                        <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center mr-3 text-gray-400" id="step3-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-center mb-1">
+                                <div class="font-medium">Preparing Offers</div>
+                                <div class="text-gray-500 text-sm font-medium" id="step3-status">Waiting...</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill-3" style="width: 0;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Messages -->
+                <div class="text-center mb-6">
+                    <p class="text-gray-600" id="message">We're verifying your information and preparing your gift card. This usually takes about 30 seconds.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-gray-100 py-4 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-xs text-gray-500">
+                <p>This offer is not sponsored or endorsed by any brand. All trademarks belong to their respective owners.</p>
+                <p class="mt-1">© 2025 Reward Wave. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Parse URL parameters
+        function getUrlParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Get funnel type and value from URL
+        const email = getUrlParam('email');
+        const funnelType = getUrlParam('type') || 'amazon';
+        const funnelValue = getUrlParam('value') || '1000';
+        const referrerId = getUrlParam('s1') || '';
+        const subId = getUrlParam('s2') || '';
+
+        // Add theme class to body based on funnel type
+        document.body.classList.add(`theme-${funnelType.toLowerCase()}`);
+
+        // Update color theme based on funnel type
+        function updateColorTheme(type) {
+            // Update top banner colors
+            const topBanner = document.getElementById('top-banner');
+            const step1Icon = document.getElementById('step1-icon');
+
+            switch (type.toLowerCase()) {
+                case 'paypal':
+                    topBanner.className = 'bg-gradient-to-r from-blue-500 to-blue-600 py-3 text-white text-center font-medium';
+                    step1Icon.className = 'w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3 text-blue-600';
+                    break;
+                case 'tiktok':
+                    topBanner.className = 'bg-gradient-to-r from-red-500 to-blue-400 py-3 text-white text-center font-medium';
+                    step1Icon.className = 'w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-3 text-red-600';
+                    break;
+                case 'amazon':
+                    topBanner.className = 'bg-gradient-to-r from-yellow-500 to-yellow-600 py-3 text-white text-center font-medium';
+                    step1Icon.className = 'w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-3 text-yellow-600';
+                    break;
+                case 'walmart':
+                    topBanner.className = 'bg-gradient-to-r from-blue-600 to-blue-700 py-3 text-white text-center font-medium';
+                    step1Icon.className = 'w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3 text-blue-600';
+                    break;
+                case 'target':
+                    topBanner.className = 'bg-gradient-to-r from-red-600 to-red-700 py-3 text-white text-center font-medium';
+                    step1Icon.className = 'w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-3 text-red-600';
+                    break;
+                default: // AMAZON
+                    topBanner.className = 'bg-gradient-to-r from-pink-400 to-pink-500 py-3 text-white text-center font-medium';
+                    step1Icon.className = 'w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center mr-3 text-pink-600';
+            }
+        }
+
+        function updateActivatePageElements() {
+            // Update particle colors
+            const particlesContainer = document.getElementById('particles-container');
+            if (particlesContainer) {
+                // Clear existing particles
+                particlesContainer.innerHTML = '';
+
+                // Get theme colors from CSS variables
+                const primaryColor = getComputedStyle(document.body).getPropertyValue('--primary-color').trim();
+                const secondaryColor = getComputedStyle(document.body).getPropertyValue('--secondary-color').trim();
+
+                const colors = [primaryColor, secondaryColor, '#ffffff', '#f8f8f8'];
+                const particleCount = 20;
+
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+                    // Random position around the gift card
+                    const angle = Math.random() * Math.PI * 2;
+                    const distance = 40 + Math.random() * 60;
+                    const x = Math.cos(angle) * distance;
+                    const y = Math.sin(angle) * distance;
+
+                    particle.style.left = `calc(50% + ${x}px)`;
+                    particle.style.top = `calc(50% + ${y}px)`;
+                    particle.style.animationDelay = `${Math.random() * 2}s`;
+
+                    particlesContainer.appendChild(particle);
+                }
+            }
+
+            // Update rings colors
+            const ring1 = document.querySelector('.ring-1');
+            const ring2 = document.querySelector('.ring-2');
+
+            if (ring1 && ring2) {
+                const primaryColor = getComputedStyle(document.body).getPropertyValue('--primary-color').trim();
+                const secondaryColor = getComputedStyle(document.body).getPropertyValue('--secondary-color').trim();
+
+                ring1.style.borderColor = primaryColor;
+                ring2.style.borderColor = secondaryColor;
+            }
+        }
+
+        // Call this function after setting the theme
+        updateActivatePageElements();
+
+        // Update banner content
+        document.getElementById('banner-value').textContent = funnelValue;
+        document.getElementById('banner-type').textContent = funnelType.toUpperCase();
+
+        // Call the function to update theme colors
+        updateColorTheme(funnelType);
+
+        // Update title based on funnel type
+        document.title = `Activating Your ${funnelType.toUpperCase()} Reward`;
+
+        // Set brand logo based on funnel type
+        const brandLogoElement = document.getElementById('brandLogo');
+        let brandLogoUrl = '/api/placeholder/140x90/' + funnelType + '-logo';
+
+        // Map of funnel types to logo URLs
+        const logoMap = {
+            'shein': 'https://taprain.com/images/funnels/shein.png',
+            'sephora': 'https://taprain.com/images/funnels/sephora.png',
+            'paypal': 'https://taprain.com/images/funnels/paypal.png',
+            'tiktok': 'https://taprain.com/images/funnels/tiktok.png',
+            'roblox': 'https://taprain.com/images/funnels/roblox.png',
+            'jdsports': 'https://taprain.com/images/funnels/jdsports.png',
+            'mcdonalds': 'https://taprain.com/images/funnels/mcdonalds.png',
+            'amazon': 'https://taprain.com/images/funnels/amazon.png',
+            'fortnite': 'https://taprain.com/images/funnels/fortnite.png',
+            'walmart': 'https://taprain.com/images/funnels/walmart.png',
+            'target': 'https://taprain.com/images/funnels/target.png',
+            'bloxfruits': 'https://taprain.com/images/funnels/bloxfruits.png',
+            'starbucks': 'https://taprain.com/images/funnels/starbucks.png',
+            'victoria': 'https://taprain.com/images/funnels/victoria.png',
+            'lululemon': 'https://taprain.com/images/funnels/lululemon.png',
+            'brawl': 'https://taprain.com/images/funnels/brawl.png',
+            'cashapp': 'https://taprain.com/images/funnels/cashapp.png',
+            'zelle': 'https://taprain.com/images/funnels/zelle.png',
+            'brandy': 'https://taprain.com/images/funnels/brandy.png',
+            'steam': 'https://taprain.com/images/funnels/steam.png',
+            'apple': 'https://taprain.com/images/funnels/apple.png',
+            'ps5': 'https://taprain.com/images/funnels/ps5.png',
+            'xbox': 'https://taprain.com/images/funnels/xbox.png',
+            'venmo': 'https://taprain.com/images/funnels/venmo.png',
+            'minecoins': 'https://taprain.com/images/funnels/minecraft.png',
+            'doordash': 'https://taprain.com/images/funnels/doordash.png',
+            'netflix': 'https://taprain.com/images/funnels/netflix.svg',
+            'aldi': 'https://taprain.com/images/funnels/aldi.jpg',
+            'marshalls': 'https://taprain.com/images/funnels/marshalls.png',
+            'crumbl': 'https://taprain.com/images/funnels/crumbl.jpg'
+        };
+
+        if (logoMap[funnelType.toLowerCase()]) {
+            brandLogoUrl = logoMap[funnelType.toLowerCase()];
+        }
+
+        brandLogoElement.src = brandLogoUrl;
+        brandLogoElement.alt = funnelType.toUpperCase() + ' Logo';
+
+        // Create particles
+        const root = document.documentElement;
+        const style = getComputedStyle(root);
+        const primaryColor = style.getPropertyValue('--primary-color').trim();
+        const secondaryColor = style.getPropertyValue('--secondary-color').trim();
+
+        const colors = [primaryColor, secondaryColor, '#ffffff', '#f8e9f0'];
+
+        // Animation sequence with proper timing
+        setTimeout(() => {
+            // Update step 2
+            document.getElementById('step2-icon').classList.remove('text-gray-400');
+            document.getElementById('step2-icon').classList.add('text-blue-500');
+            document.getElementById('progress-fill-2').style.width = '100%';
+            document.getElementById('status-text').textContent = 'Generating your gift card...';
+            document.getElementById('message').textContent = `Your $${funnelValue} ${funnelType.toUpperCase()} gift card is being generated. Please wait...`;
+
+            // Make gift card "glow" with theme color
+            const giftCard = document.getElementById('gift-card');
+            const primaryColor = getComputedStyle(document.body).getPropertyValue('--primary-color').trim();
+            giftCard.style.boxShadow = `0 0 30px ${primaryColor}`;
+
+            // Pulse light beam effect
+            const lightBeam = document.getElementById('light-beam');
+            lightBeam.style.width = '200px';
+            lightBeam.style.height = '200px';
+            lightBeam.style.opacity = '0.7';
+            lightBeam.style.transition = 'all 2s ease';
+        }, 1500);
+
+        setTimeout(() => {
+            // Update step 2 to complete
+            document.getElementById('step2-icon').innerHTML = '<i class="fas fa-check"></i>';
+            document.getElementById('step2-icon').classList.remove('text-blue-500');
+            document.getElementById('step2-icon').classList.add('text-green-500');
+            document.getElementById('step2-status').textContent = 'Complete';
+            document.getElementById('step2-status').classList.remove('text-blue-500');
+            document.getElementById('step2-status').classList.add('text-green-500');
+
+            // Update step 3
+            document.getElementById('step3-icon').innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+            document.getElementById('step3-icon').classList.remove('text-gray-400');
+            document.getElementById('step3-icon').classList.add('text-blue-500');
+            document.getElementById('step3-status').textContent = 'Processing...';
+            document.getElementById('step3-status').classList.remove('text-gray-500');
+            document.getElementById('step3-status').classList.add('text-blue-500');
+            document.getElementById('progress-fill-3').style.width = '100%';
+
+            document.getElementById('status-text').textContent = 'Almost ready...';
+            document.getElementById('message').textContent = 'We\'re preparing your personalized offer selection to claim your reward.';
+
+            // Further animate gift card
+            const giftCard = document.getElementById('gift-card');
+            giftCard.style.transform = 'translate(-50%, -50%) scale(1.1)';
+
+            // Fade out light beam
+            const lightBeam = document.getElementById('light-beam');
+            lightBeam.style.opacity = '0.3';
+        }, 3500);
+
+        setTimeout(() => {
+            // Update step 3 to complete
+            document.getElementById('step3-icon').innerHTML = '<i class="fas fa-check"></i>';
+            document.getElementById('step3-icon').classList.remove('text-blue-500');
+            document.getElementById('step3-icon').classList.add('text-green-500');
+            document.getElementById('step3-status').textContent = 'Complete';
+            document.getElementById('step3-status').classList.remove('text-blue-500');
+            document.getElementById('step3-status').classList.add('text-green-500');
+
+            // Show completion animation
+            const giftCard = document.getElementById('gift-card');
+            const activationCheck = document.getElementById('activation-check');
+
+            // Scale up light beam one last time
+            const lightBeam = document.getElementById('light-beam');
+            lightBeam.style.width = '300px';
+            lightBeam.style.height = '300px';
+            lightBeam.style.opacity = '0.9';
+
+            // Then fade out gift card and show checkmark
+            setTimeout(() => {
+                giftCard.style.opacity = '0';
+                giftCard.style.transform = 'translate(-50%, -50%) scale(0.8)';
+
+                setTimeout(() => {
+                    activationCheck.style.transform = 'translate(-50%, -50%) scale(1)';
+                    activationCheck.style.opacity = '1';
+
+                    document.getElementById('status-text').textContent = 'Verification Complete!';
+                    document.getElementById('message').textContent = 'Your reward is ready. Redirecting you to the next step...';
+                }, 150);
+            }, 350);
+        }, 5000);
+
+        // Redirect to offerwall after animation
+        setTimeout(() => {
+            window.location.href = './offerwall.html';
+        }, 6000);
+
+        const currencyHandler = {
+            // Default values
+            state: {
+                symbol: '$',
+                code: 'USD',
+                country: 'US',
+                initialized: false,
+                replaced: false
+            },
+
+            // Initialize currency detection and replacement
+            init: function() {
+                console.log("Initializing currency handler");
+
+                // First try to get currency from meta tags (server-side detection)
+                const symbolMeta = document.querySelector('meta[name="currency-symbol"]');
+                const codeMeta = document.querySelector('meta[name="currency-code"]');
+                const countryMeta = document.querySelector('meta[name="currency-country"]');
+
+                if (symbolMeta && symbolMeta.content) {
+                    this.state.symbol = symbolMeta.content;
+                    this.state.code = codeMeta  .content || 'USD';
+                    this.state.country = countryMeta  .content || 'US';
+                    this.state.initialized = true;
+                    console.log(`Currency from meta tags: ${this.state.symbol} (${this.state.code})`);
+                }
+                // Next, try to get from body data attributes
+                else if (document.body.hasAttribute('data-currency')) {
+                    this.state.symbol = document.body.getAttribute('data-currency') || '$';
+                    this.state.code = document.body.getAttribute('data-currency-code') || 'USD';
+                    this.state.country = document.body.getAttribute('data-country') || 'US';
+                    this.state.initialized = true;
+                    console.log(`Currency from body attributes: ${this.state.symbol} (${this.state.code})`);
+                }
+                // Fall back to URL parameters if present
+                else if (new URLSearchParams(window.location.search).get('currency_symbol')) {
+                    this.state.symbol = new URLSearchParams(window.location.search).get('currency_symbol') || '$';
+                    this.state.code = new URLSearchParams(window.location.search).get('currency_code') || 'USD';
+                    this.state.country = new URLSearchParams(window.location.search).get('country') || 'US';
+                    this.state.initialized = true;
+                    console.log(`Currency from URL params: ${this.state.symbol} (${this.state.code})`);
+                }
+
+                // Set data attributes on the body for other scripts to use
+                document.body.setAttribute('data-currency', this.state.symbol);
+                document.body.setAttribute('data-currency-code', this.state.code);
+                document.body.setAttribute('data-country', this.state.country);
+
+                // Apply the currency symbol replacements
+                this.updateAllCurrencySymbols();
+
+                // Set a timer for a second check to catch dynamically created elements
+                setTimeout(() => this.updateAllCurrencySymbols(), 1500);
+
+                // Set up observers for dynamic content
+                this.setupObservers();
+
+                return this.state;
+            },
+
+            // Update all currency symbols in the document
+            updateAllCurrencySymbols: function() {
+                // Skip if we're using USD or we've already completed the replacement
+                if (this.state.symbol === '$' || this.state.replaced) {
+                    return;
+                }
+
+                console.log(`Updating $ symbols to ${this.state.symbol}`);
+
+                // 1. Update all .currency-symbol elements (if explicitly tagged)
+                document.querySelectorAll('.currency-symbol').forEach(el => {
+                    el.textContent = this.state.symbol;
+                });
+
+                // 2. Walk all text nodes to find $ symbols
+                this.walkTextNodes(document.body);
+
+                // 3. Update specific important elements
+                this.updateCriticalElements();
+
+                // 4. Flag that we've done the replacement
+                this.state.replaced = true;
+                console.log('Currency symbol update complete');
+            },
+
+            // Process all text nodes in the document
+            walkTextNodes: function(node) {
+                if (node.nodeType === 3) { // Text node
+                    if (node.textContent && node.textContent.includes('$')) {
+                        node.textContent = node.textContent.replace(/\$/g, this.state.symbol);
+                    }
+                } else if (node.nodeType === 1) { // Element node
+                    // Skip script and style elements
+                    if (node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') {
+                        for (let i = 0; i < node.childNodes.length; i++) {
+                            this.walkTextNodes(node.childNodes[i]);
+                        }
+                    }
+                }
+            },
+
+            // Update critical elements that are known to contain currency symbols
+            updateCriticalElements: function() {
+                // List of element IDs that may contain currency symbols
+                const criticalElementIds = [
+                    'displayValue', 'display-value', 'display-value-animator',
+                    'bannerValue', 'banner-value', 'banner-value-animator',
+                    'fullRewardLabel', 'rewardValue',
+                    'step-2', 'step-3', 'step-4',
+                    'claim-reward-btn'
+                ];
+
+                // Process each critical element
+                criticalElementIds.forEach(id => {
+                    const element = document.getElementById(id);
+                    if (element) {
+                        this.updateElementContent(element);
+
+                        // Special handling for parent elements that might contain the actual $ symbol
+                        if (['displayValue', 'display-value', 'display-value-animator',
+                                'bannerValue', 'banner-value', 'banner-value-animator'
+                            ].includes(id)) {
+                            // Check parent and grandparent for currency symbols
+                            if (element.parentElement) {
+                                this.updateElementContent(element.parentElement);
+
+                                if (element.parentElement.parentElement) {
+                                    this.updateElementContent(element.parentElement.parentElement);
+                                }
+                            }
+                        }
+                    }
+                });
+
+                // Also check elements with specific classes
+                const criticalClasses = [
+                    'amount-highlight', 'headline', 'currency-value', 'price',
+                    'text-green-500', 'text-gray-600', 'font-medium', 'reward'
+                ];
+
+                criticalClasses.forEach(className => {
+                    document.querySelectorAll(`.${className}`).forEach(element => {
+                        this.updateElementContent(element);
+                    });
+                });
+            },
+
+            // Update both text and HTML content of an element
+            updateElementContent: function(element) {
+                if (!element) return;
+
+                // Update text content directly if it contains $ symbol
+                if (element.innerText && element.innerText.includes('$')) {
+                    element.innerText = element.innerText.replace(/\$/g, this.state.symbol);
+                }
+
+                // For elements with innerHTML, we need to be careful not to modify scripts
+                if (element.innerHTML && element.innerHTML.includes('$')) {
+                    // This temporary element approach preserves scripts
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = element.innerHTML;
+
+                    // Store scripts to prevent modifying them
+                    const scripts = [];
+                    tempDiv.querySelectorAll('script').forEach(script => {
+                        scripts.push(script.outerHTML);
+                        script.remove();
+                    });
+
+                    // Replace $ in the remaining HTML
+                    tempDiv.innerHTML = tempDiv.innerHTML.replace(/\$/g, this.state.symbol);
+
+                    // Add scripts back
+                    scripts.forEach(script => {
+                        tempDiv.innerHTML += script;
+                    });
+
+                    // Update the original element's HTML
+                    element.innerHTML = tempDiv.innerHTML;
+                }
+            },
+
+            // Set up mutation observers to catch dynamically added content
+            setupObservers: function() {
+                // Skip if mutation observer isn't supported
+                if (!window.MutationObserver) return;
+
+                // Create observer to watch for DOM changes
+                const observer = new MutationObserver(mutations => {
+                    let needsUpdate = false;
+
+                    for (const mutation of mutations) {
+                        // Only process if we see that $ symbols might be involved
+                        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                            // Check if any added nodes contain $ symbol
+                            for (const node of mutation.addedNodes) {
+                                if (node.nodeType === 1 && node.textContent && node.textContent.includes('$')) {
+                                    needsUpdate = true;
+                                    break;
+                                }
+                            }
+                        }
+                        // Check if text was modified
+                        else if (mutation.type === 'characterData' &&
+                            mutation.target.textContent &&
+                            mutation.target.textContent.includes('$')) {
+                            needsUpdate = true;
+                        }
+
+                        if (needsUpdate) break;
+                    }
+
+                    // Update only if necessary
+                    if (needsUpdate) {
+                        // Reset the 'replaced' flag temporarily to allow updates
+                        this.state.replaced = false;
+                        this.updateAllCurrencySymbols();
+                    }
+                });
+
+                // Start observing
+                observer.observe(document.body, {
+                    childList: true, // Watch for element additions/removals
+                    subtree: true, // Watch the entire DOM tree
+                    characterData: true // Watch for text changes
+                });
+            }
+        };
+
+        // Initialize the handler when the DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            currencyHandler.init();
+        });
+
+        // Also initialize once everything is loaded (catch late changes)
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                // Reset replaced flag to force another update
+                currencyHandler.state.replaced = false;
+                currencyHandler.updateAllCurrencySymbols();
+            }, 500);
+        });
+
+        // Export a refresh function that can be used by other scripts
+        window.refreshCurrencySymbols = function() {
+            currencyHandler.state.replaced = false;
+            currencyHandler.updateAllCurrencySymbols();
+        };
+
+        // Special integration with counter animations
+        // Check if the original counter animation code exists and hook into it
+        if (typeof window.absoluteZeroMovementCounter === 'function') {
+            // Store the original function
+            const originalCounter = window.absoluteZeroMovementCounter;
+
+            // Replace with a version that updates currency afterward
+            window.absoluteZeroMovementCounter = function(targetElement, finalValue, duration = 1500) {
+                // Call the original counter function
+                originalCounter(targetElement, finalValue, duration);
+
+                // After counter finishes, update currency symbols
+                setTimeout(() => {
+                    currencyHandler.state.replaced = false;
+                    currencyHandler.updateAllCurrencySymbols();
+                }, duration + 100);
+            };
+        }
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set data attributes on the body
+            document.body.setAttribute('data-currency', '$');
+            document.body.setAttribute('data-currency-code', 'USD');
+            document.body.setAttribute('data-country', 'NG');
+            document.body.setAttribute('data-language', 'en');
+
+            // Update all elements with dollar signs
+            if ('$' !== '$') {
+                // Walk all text nodes
+                function walkTextNodes(node) {
+                    if (node.nodeType === 3 && node.textContent.includes('$')) {
+                        node.textContent = node.textContent.replace(/\$/g, '$');
+                    } else {
+                        for (let i = 0; i < node.childNodes.length; i++) {
+                            walkTextNodes(node.childNodes[i]);
+                        }
+                    }
+                }
+                walkTextNodes(document.body);
+
+                // Update specific elements
+                const ids = ['displayValue', 'fullRewardLabel', 'rewardValue', 'step-2', 'step-3', 'step-4'];
+                ids.forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) {
+                        if (el.innerHTML.includes('$')) {
+                            el.innerHTML = el.innerHTML.replace(/\$/g, '$');
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    
+ <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9547f40ebece9409","version":"2025.6.2","r":1,"token":"b7683189cc244445887bd86330ce05cc","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>       
+</body>
+
+</html>
